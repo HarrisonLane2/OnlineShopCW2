@@ -40,6 +40,21 @@ class Controllers
         return $this->products;
     }
 
+    public function roles() //added controllers for the new tables roles and categories
+    {
+        if ($this->roles === null) {
+            $this->roles= new rolesController($this->db);
+        }
+        return $this->roles;
+    }
+
+    public function categories()
+    {
+        if ($this->categories === null) {
+            $this->categories= new categorieController($this->db);
+        }
+        return $this->categories;
+    }
 }
 
 ?>

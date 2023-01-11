@@ -13,7 +13,7 @@
       <a class="navbar-brand" href="./index.php">Online Shop</a>
       <a class="navbar-brand" href="./product.php">products</a>
       <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Staff Access
+          Staff Access p
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="./manage-users.php">Users</a>
