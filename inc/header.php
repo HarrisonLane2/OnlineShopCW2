@@ -16,10 +16,10 @@
           Staff Access
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Users</a>
+          <a class="dropdown-item" href="./manage-users.php">Users</a>
           <a class="dropdown-item" href="./add-user-role.php">User roles</a>
           <a class="dropdown-item" href="./add-product.php">Products</a>
-          <a class="dropdown-item" href="#">Categories</a>
+          <a class="dropdown-item" href="">Categories</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

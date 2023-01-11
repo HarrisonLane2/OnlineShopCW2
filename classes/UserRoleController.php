@@ -57,7 +57,7 @@ class RoleController
         return $this->db->runSQL($sql, $roles)->execute();
     }
 
-    public function delete(int $id) : bool
+    public function delete(int $id) : bool //deletes a user where 
     {
         $sql = "DELETE FROM roles WHERE id = :id";
         return $this->db->runSQL($sql, ['id' => $id])->execute();
