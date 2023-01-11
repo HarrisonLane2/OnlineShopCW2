@@ -12,8 +12,8 @@ class RoleController
     public function Create(array $roles) : int
     {
         
-        $sql = "INSERT INTO roles(roleName, description,)
-        VALUES (:roleName, :description);";
+        $sql = "INSERT INTO roles(roleID, staff, admin)
+        VALUES (:roleID, :staff, :admin);";
         $this->db->runSQL($sql, $roles);
         return $this->db->lastInsertId();
        
@@ -21,8 +21,8 @@ class RoleController
 
     public function get(int $id)
     {
-        $sql = "SELECT * FROM roles WHERE id = :id";
-        $args = ['id' => $id];
+        $sql = "SELECT * FROM roles WHERE roleID = :ID";
+        $args = ['roleID' => $id];
         return $this->db->runSQL($sql, $args) -> fetch();
     }
 
@@ -32,10 +32,17 @@ class RoleController
         return $this->db->runSQL($sql) -> fetchAll();
     }
 
-    public function getByRole(string $roleName) 
+    public function getAdmin(string $userName) 
     {
-        $sql = "SELECT * FROM roles WHERE roleName = :roleName";
-        $args = ['roleName' => $roleName];
+        $sql = "SELECT * FROM roles WHERE admin = '1'";
+        $args = ['userID' => $userName];
+        return $this->db->runSQL($sql, $args) -> fetch();
+    }
+
+    public function getstaff(string $userName) 
+    {
+        $sql = "SELECT * FROM roles WHERE staff = '1'";
+        $args = ['userID' => $userName];
         return $this->db->runSQL($sql, $args) -> fetch();
     }
 
